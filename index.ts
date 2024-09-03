@@ -17,5 +17,9 @@ const sum_to_n_b = (n: number): number => {
 };
 
 const sum_to_n_c = (n: number): number => {
-  return 0;
+  const result = (n * (n + 1)) / 2;
+  console.log("Result sum_to_n_c is:", result);
+  return result;
 };
+
+sum_to_n_c(5);
