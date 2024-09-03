@@ -13,8 +13,21 @@ const sum_to_n_a = (n: number): number => {
 sum_to_n_a(5);
 
 const sum_to_n_b = (n: number): number => {
-  return 0;
+  const recurFunc = (n: number): number => {
+    if (n === 0) {
+      return 0;
+    }
+
+    return n + recurFunc(n - 1);
+  };
+  const result = recurFunc(n);
+
+  console.log("Result sum_to_n_b is:", result);
+
+  return result;
 };
+
+sum_to_n_b(5);
 
 const sum_to_n_c = (n: number): number => {
   const result = (n * (n + 1)) / 2;
